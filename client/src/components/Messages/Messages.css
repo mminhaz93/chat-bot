@@ -1,5 +1,10 @@
 .messages {
   padding: 5% 0;
-  overflow: auto;
   flex: auto;
+  overflow-y: scroll;
+  height: 455px;
+}
+
+.message-container {
+  display: grid;
 }

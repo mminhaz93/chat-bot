@@ -5,31 +5,34 @@ import onlineIcon from '../../icons/onlineIcon.png';
 import './TextContainer.css';
 
 const TextContainer = ({ users }) => (
-  <div className="textContainer">
-    <div>
-      <h1>Realtime Chat Application <span role="img" aria-label="emoji">💬</span></h1>
-      <h2>Created with React, Express, Node and Socket.IO <span role="img" aria-label="emoji">❤️</span></h2>
-      <h2>Try it out right now! <span role="img" aria-label="emoji">⬅️</span></h2>
-    </div>
-    {
-      users
-        ? (
-          <div>
-            <h1>People currently chatting:</h1>
-            <div className="activeContainer">
-              <h2>
-                {users.map(({name}) => (
-                  <div key={name} className="activeItem">
-                    {name}
-                    <img alt="Online Icon" src={onlineIcon}/>
+  <div className='textContainer'>
+    <div></div>
+    {users ? (
+      <div>
+        <h5>
+          {users.length} {users.length > 1 ? 'Particiapants' : 'Participant'}
+        </h5>
+        <div className='activeContainer'>
+          <ul className='list'>
+            {users.map(({ name }) => (
+              <li key={name} className='activeItem clearfix'>
+                <div className='about'>
+                  <div className='name'>{name}</div>
+                  <div className='status'>
+                    <img
+                      className='status-img'
+                      alt='Online Icon'
+                      src={onlineIcon}
+                    />{' '}
+                    online
                   </div>
-                ))}
-              </h2>
-            </div>
-          </div>
-        )
-        : null
-    }
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ) : null}
   </div>
 );
 

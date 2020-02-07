@@ -1,14 +1,42 @@
 .textContainer {
+  float: left;
+}
+
+h5 {
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  color: #ffffff;
+}
+
+ul {
+  padding: 10px;
+}
+
+.name {
+  text-transform: capitalize;
+  color: #ffffff;
+  padding: 10px 0px 0px 10px;
+}
+
+.status {
+  color: black;
+  text-transform: capitalize;
   display: flex;
-  flex-direction: column;
-  margin-left: 100px;
-  color: white;
-  height: 60%;
-  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.status-img {
+  padding-right: 5px;
+}
+
+li {
+  padding-bottom: 10px;
 }
 
 .activeContainer {
-  display: flex;
   align-items: center;
   margin-bottom: 50%;
 }
@@ -16,6 +44,9 @@
 .activeItem {
   display: flex;
   align-items: center;
+  background-color: #ffffff1a;
+  min-width: 200px;
+  margin-bottom: 10px;
 }
 
 .activeContainer img {
@@ -26,7 +57,7 @@
   margin-bottom: 0px;
 }
 
-@media (min-width: 320px) and (max-width: 1200px) {
+@media (max-width: 767px) {
   .textContainer {
     display: none;
   }

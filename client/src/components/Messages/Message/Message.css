@@ -1,10 +1,40 @@
-.messageBox {
-  background: #F3F3F3;
-  border-radius: 20px;
-  padding: 5px 20px;
+.message {
   color: white;
+  padding: 18px 20px;
+  line-height: 26px;
+  font-size: 16px;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  width: 90%;
+  position: relative;
   display: inline-block;
-  max-width: 80%;
+}
+
+.message::after {
+  bottom: 100%;
+  left: 7%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #86bb71;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.message-data {
+  margin-bottom: 15px;
+}
+
+.message-data-time {
+  color: #92959e;
+  padding-left: 6px;
+}
+
+.message-data-name {
+  text-transform: capitalize;
 }
 
 .messageText {
@@ -15,31 +45,12 @@
   word-wrap: break-word;
 }
 
+.float-right {
+  float: right;
+}
+
 .messageText img {
   vertical-align: middle;
-}
-
-.messageContainer {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 5%;
-  margin-top: 3px;
-}
-
-.sentText {
-  display: flex;
-  align-items: center;
-  font-family: Helvetica;
-  color: #828282;
-  letter-spacing: 0.3px;
-}
-
-.pl-10 {
-  padding-left: 10px;
-}
-
-.pr-10 {
-  padding-right: 10px;
 }
 
 .justifyStart {
@@ -58,10 +69,23 @@
   color: #353535;
 }
 
-.backgroundBlue {
-  background: #2979FF;
+.backgroundGreen {
+  background: #86bb71;
 }
 
-.backgroundLight {
-  background: #F3F3F3;
+.backgroundLightBlue {
+  background: #94c2ed;
+}
+
+.my-message {
+  background: #86bb71;
+}
+
+.other-message {
+  background: #94c2ed;
+}
+
+.other-message::after {
+  border-bottom-color: #94c2ed;
+  left: 93%;
 }

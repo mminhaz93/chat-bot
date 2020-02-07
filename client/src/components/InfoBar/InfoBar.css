@@ -2,27 +2,43 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #2979FF;
   border-radius: 4px 4px 0 0;
   height: 60px;
   width: 100%;
+  padding: 20px;
+  border-bottom: 2px solid white;
+}
+
+.chat-num-messages {
+  color: #92959e;
 }
 
 .leftInnerContainer {
   flex: 0.5;
-  display: flex;
   align-items: center;
-  margin-left: 5%;
-  color: white;
+  color: #434651;
+}
+
+.leftInnerContainer h3 {
+  text-transform: capitalize;
+  margin: 0px;
 }
 
 .rightInnerContainer {
   display: flex;
   flex: 0.5;
   justify-content: flex-end;
-  margin-right: 5%;
 }
 
+.rightInnerContainer a {
+  color: black !important;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+.rightInnerContainer a:hover {
+  text-shadow: 0px 3px 10px #000000;
+}
 .onlineIcon {
   margin-right: 5%;
 }

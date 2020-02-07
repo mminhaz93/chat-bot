@@ -1,18 +1,18 @@
 import React from 'react';
 
-import onlineIcon from '../../icons/onlineIcon.png';
-import closeIcon from '../../icons/closeIcon.png';
-
 import './InfoBar.css';
 
-const InfoBar = ({ room }) => (
-  <div className="infoBar">
-    <div className="leftInnerContainer">
-      <img className="onlineIcon" src={onlineIcon} alt="online icon" />
+const InfoBar = ({ messages, room }) => (
+  <div className='infoBar'>
+    <div className='leftInnerContainer'>
       <h3>{room}</h3>
+      <div className='chat-num-messages'>
+        already {messages.length} {messages.length > 1 ? 'messages' : 'message'}
+      </div>
     </div>
-    <div className="rightInnerContainer">
-      <a href="/"><img src={closeIcon} alt="close icon" /></a>
+
+    <div className='rightInnerContainer'>
+      <a href='/'>x</a>
     </div>
   </div>
 );

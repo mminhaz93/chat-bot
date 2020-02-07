@@ -1,27 +1,37 @@
-.form {
-  display: flex;
-  border-top: 2px solid #D3D3D3;
+.chat-message {
+  padding: 10px;
+  border-top: 2px solid #ffffff;
 }
 
-.input {
-  border: none;
-  border-radius: 0;
-  padding: 5%;
-  width: 80%;
-  font-size: 1.2em;
+.fa-file-o,
+.fa-file-image-o {
+  font-size: 16px;
+  color: gray;
+  cursor: pointer;
 }
 
-input:focus, textarea:focus, select:focus{
-  outline: none;
-}
-
-.sendButton {
-  color: #fff !important;
+button {
+  float: right;
+  color: #94c2ed;
+  font-size: 16px;
   text-transform: uppercase;
-  text-decoration: none;
-  background: #2979FF;
-  padding: 20px;
-  display: inline-block;
   border: none;
-  width: 20%;
+  cursor: pointer;
+  font-weight: bold;
+  background: #f2f5f8;
+}
+
+button:hover {
+  color: #0c87fa;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+  font-size: 1em;
 }
