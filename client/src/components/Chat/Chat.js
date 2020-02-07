@@ -17,8 +17,7 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  // const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
-  const ENDPOINT = 'localhost:5000';
+  const ENDPOINT = 'https://git.heroku.com/minhaz-chat-app.git';
 
   useEffect(
     () => {

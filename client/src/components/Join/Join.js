@@ -11,6 +11,9 @@ export default function SignIn() {
     <div className='joinOuterContainer'>
       <div className='joinInnerContainer'>
         <h1 className='heading'>Join</h1>
+        <div className='instructions'>
+          » Sign In and share room name with others
+        </div>
         <div>
           <input
             placeholder='Name'
