@@ -2,7 +2,7 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const cors = require('cors');
-const moment = require('moment');
+var moment = require('moment-timezone');
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
 
@@ -16,7 +16,9 @@ app.use(cors());
 app.use(router);
 
 io.on('connect', socket => {
-  let now = moment().format('h:mm A');
+  let now = moment()
+    .tz('America/New_York')
+    .format('h:mm A');
   socket.on('join', ({ name, room }, callback) => {
     const { error, user } = addUser({ id: socket.id, name, room });
 
